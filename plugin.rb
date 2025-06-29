@@ -14,14 +14,12 @@ module ::MyPluginModule
   PLUGIN_NAME = "discourse-preload-optimization"
 end
 
-# require_relative "lib/my_plugin_module/engine"
-
 after_initialize do
   module ::DiscoursePreloadOptimization
     module OverrideApplicationLayoutPreloader
       class TopicTrackingState < ::TopicTrackingState
         def self.report(*args)
-          if SiteSetting.optimized_application_preload &&
+          if SiteSetting.discourse_preload_optimization_enabled &&
                SiteSetting.preload_optimization_topic_tracking_state_mode != "sync"
             {}
           else
