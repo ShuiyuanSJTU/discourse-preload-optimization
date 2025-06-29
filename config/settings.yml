@@ -1,0 +1,12 @@
+discourse_preload_optimization:
+  discourse_preload_optimization_enabled:
+    default: false
+    client: true
+  preload_optimization_topic_tracking_state_mode:
+    client: true
+    type: enum
+    default: "sync"
+    choices:
+      - sync
+      - async
+      - none

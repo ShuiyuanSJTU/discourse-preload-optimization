@@ -1,0 +1,5 @@
+en:
+  site_settings:
+    discourse_preload_optimization_enabled: "启用预加载优化插件"
+    preload_optimization_topic_tracking_state_mode: "加载TopicTrackingState的方式。
+      选择'sync'将同步加载（Discourse默认），'async'将异步加载，'none'为不加载。"
